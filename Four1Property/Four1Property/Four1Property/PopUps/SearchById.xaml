@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+                  xmlns:trans ="clr-namespace:Four1Property.Helpers"
+             x:Class="Four1Property.PopUps.SearchById">
+
+    <StackLayout Padding="20,20,20,20"
+                 BackgroundColor="#E6A9A9A9"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        <Label x:Name="IDLable" Text="{trans:Translate PropertyID}" HorizontalOptions="Center" TextColor="#FF071D66" FontSize="12"/>
+        <Entry x:Name="IDEntry"  FontSize="12" Placeholder="{trans:Translate EnterIDNumber}"
+               Text="{Binding PropertyId}"  PlaceholderColor="#FF071D66" />
+        <Button x:Name="SearchID" Text="{trans:Translate Search}" 
+                Style="{StaticResource ButtonStyle1}" 
+                Command="{Binding SearchByIDCommand}"/>
+    </StackLayout>
+</pages:PopupPage>

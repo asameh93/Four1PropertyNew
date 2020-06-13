@@ -15,7 +15,12 @@ namespace Four1Property.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
+            UserDialogs.Init(this);
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            //Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
+            //FFImageLoading.Forms.Platform.CachedImageRenderer.Init(false);
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             UserDialogs.Init(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
@@ -25,6 +30,7 @@ namespace Four1Property.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            //global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }

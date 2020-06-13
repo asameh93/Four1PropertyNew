@@ -4,7 +4,7 @@ using Four1Property.Droid;
 
 namespace Four1Property.Droid
 {
-	[Activity(Label = "Four1Property", Icon = "@drawable/Splashbackground", Theme = "@style/splashscreen",
+	[Activity(Label = "Four1Property", Icon = "@drawable/logo1", Theme = "@style/splashscreen",
 			  MainLauncher = true, NoHistory = true)]
 	public class SplashActivity : AppCompatActivity
 	{

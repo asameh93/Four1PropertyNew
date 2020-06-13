@@ -54,6 +54,14 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "Plugin.CurrentActivity": {
+              "target": "Package",
+              "version": "[2.1.0.4, )"
+            },
+            "Plugin.Multilingual": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Plugin.Toast": {
               "target": "Package",
               "version": "[2.1.2, )"
@@ -70,6 +78,10 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Xam.Plugins.Settings": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
@@ -81,6 +93,14 @@
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -146,6 +166,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "Plugin.Multilingual": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Plugin.Toast": {
               "target": "Package",
               "version": "[2.1.2, )"
@@ -162,6 +186,10 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Xam.Plugins.Settings": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
@@ -173,6 +201,14 @@
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

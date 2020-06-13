@@ -4,6 +4,8 @@
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application android:label="Four1Property.Android">
       
@@ -16,5 +18,4 @@
       </provider>
 
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

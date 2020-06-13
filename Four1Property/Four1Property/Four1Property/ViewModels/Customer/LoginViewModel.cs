@@ -5,6 +5,7 @@ using Four1Property.Views.Customer;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Four1Property.ViewModels.Customer
@@ -38,36 +39,45 @@ namespace Four1Property.ViewModels.Customer
         {
             try
             {
-                if(!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password))
+                var current = Connectivity.NetworkAccess;
+                if (current == NetworkAccess.Internet)
                 {
-                    if(ValidationServices.EmailValidation(Email))
+                    // Connection to internet is available
+                    if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password))
                     {
-                        var result = ApiService.GetOneWithoutData<string>("properties", "LoginMobile/?email=" + Email + "&password=" + Password);
-                        if (result != null)
+                        if (ValidationServices.EmailValidation(Email))
                         {
-                            if(result.Equals("InvalidPassword"))
+                            var result = ApiService.GetOneWithoutData<string>("properties", "LoginMobile/?email=" + Email + "&password=" + Password);
+                            if (result != null)
                             {
-                                Plugin.Toast.CrossToastPopUp.Current.ShowToastError("Invalid Password", Plugin.Toast.Abstractions.ToastLength.Long);
+                                if (result.Equals("InvalidPassword"))
+                                {
+                                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("InvalidPassword"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                }
+                                else
+                                {
+                                    App.Current.MainPage = new MainPage();
+                                    Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helpers.TranslateExtension.Translate("LoginSuccess"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                }
                             }
                             else
                             {
-                                App.Current.MainPage = new Home();
-                                Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess("Login Successfully", Plugin.Toast.Abstractions.ToastLength.Long);
+                                Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("ErrorCredentials"), Plugin.Toast.Abstractions.ToastLength.Long);
                             }
                         }
                         else
                         {
-                            Plugin.Toast.CrossToastPopUp.Current.ShowToastError("Error Credentials", Plugin.Toast.Abstractions.ToastLength.Long);
+                           Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("ValidEmail"), Plugin.Toast.Abstractions.ToastLength.Long);
                         }
                     }
                     else
                     {
-                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError("Enter Valid Email", Plugin.Toast.Abstractions.ToastLength.Long);
+                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("EnterAllFields"), Plugin.Toast.Abstractions.ToastLength.Long);
                     }
                 }
                 else
                 {
-                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError("Enter All Fields", Plugin.Toast.Abstractions.ToastLength.Long);
+                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
                 }
             }
             catch (Exception)

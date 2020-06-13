@@ -4,178 +4,93 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" BackgroundImage="Splashbackground.png" 
-             x:Class="Four1Property.Views.Home">
+                  xmlns:trans ="clr-namespace:Four1Property.Helpers"
+             x:Class="Four1Property.Views.Home" 
+             IconImageSource="home2.png">
 
-        <Grid RowSpacing="5" ColumnSpacing="0">
-            <Grid.RowDefinitions >
-                <!--0-->
-                <RowDefinition Height="0.5*"/>
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Both">
 
-                <!--1-->
-                <RowDefinition Height="0.3*"/>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                <!--2-->
-                <RowDefinition Height="*"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Red" HeightRequest="100">
 
-                <!--3-->
-                <RowDefinition Height="50"/>
-
-                <!--4-->
-                <RowDefinition Height="40"/>
-
-
-
-            </Grid.RowDefinitions>
-
-            <!--Start Back Arrow -->
-            <Grid x:Name="ArrowEnglish" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Start" IsVisible="False">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                    <ColumnDefinition Width="50"/>
-                </Grid.ColumnDefinitions>
-                <Image x:Name="mainback" Source="BackArrow.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="backmain_Tapped"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </Grid>
-            <!-- End Back Arrow -->
-
-            <!--Start Back Arrow Arabic -->
-            <Grid x:Name="ArrowArabic" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" IsVisible="False">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                    <ColumnDefinition Width="50"/>
-                </Grid.ColumnDefinitions>
-                <Image x:Name="Arabicback" Source="BackArrow.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="backmain_Tapped"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </Grid>
-            <!-- End Back Arrow Arabic-->
-
-            <!--<Grid x:Name="MenuEn" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="End" IsVisible="False">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0"/>
-                    <ColumnDefinition Width="50"/>
-                </Grid.ColumnDefinitions>
-                <Image x:Name="Menu" Source="menu.png"  BackgroundColor="Transparent" Scale="0.6" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Start" Aspect="AspectFit">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Menu_Activated"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </Grid>-->
-            <!--Start Rent OR Sale  -->
-            <Grid Grid.Row="1" ColumnSpacing="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="11" />
-                    <!--0-->
-                    <ColumnDefinition Width="*" />
-                    <!--1-->
-                    <ColumnDefinition Width="*" />
-                    <!--2-->
-                    <ColumnDefinition Width="11" />
-                    <!--3-->
-                </Grid.ColumnDefinitions>
-
-                <BoxView BackgroundColor="Green" Grid.Column="1" IsVisible="False"/>
-                <BoxView BackgroundColor="Green" Grid.Column="2" IsVisible="False"/>
-
-                <Image x:Name="Sale" Source="Choose1.png" Grid.Column="1"  HorizontalOptions="EndAndExpand" IsVisible="True" VerticalOptions="StartAndExpand"  >
+                <Image x:Name="Sale" Source="Choose1.png" HorizontalOptions="StartAndExpand"
+                       WidthRequest="150" HeightRequest="400"
+                       IsVisible="True" VerticalOptions="StartAndExpand">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnSaleClicked"/>
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image x:Name="SaleBlue" Source="Choose11.png" Grid.Column="1"  HorizontalOptions="EndAndExpand"  VerticalOptions="StartAndExpand" IsVisible="False" />
+                <Image x:Name="SaleBlue" Source="Choose11.png" Grid.Column="1" 
+                       HorizontalOptions="StartAndExpand"  VerticalOptions="StartAndExpand" IsVisible="False" />
 
-                <Image x:Name="Rent" Source="Choose2.png" Grid.Column="2"  HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="True"  >
+                <Image x:Name="Rent" Source="Choose2.png" HorizontalOptions="EndAndExpand"
+                       WidthRequest="150" HeightRequest="400" Aspect="AspectFit"
+                       VerticalOptions="StartAndExpand" IsVisible="True">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnRentClicked"/>
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image x:Name="RentBlue" Source="Choose22.png" Grid.Column="2"  HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="False"  />
+                <Image x:Name="RentBlue" Source="Choose22.png" Grid.Column="2" 
+                       HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" IsVisible="False"  />
 
-            </Grid>
-            <!--End Rent OR Sale  -->
 
-            <!--Start Main Cat -->
-            <Grid Grid.Row="2" x:Name="maincategory">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="10" />
-                </Grid.ColumnDefinitions>
+            </StackLayout>
 
-                <Grid.RowDefinitions >
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Grid.Column="1" >
-                    <Grid.RowDefinitions >
-                        <RowDefinition Height="0.4*"/>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="0.4*"/>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="0.4*"/>
-                        <RowDefinition Height="*"/>
+            <StackLayout Margin="20">
 
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-                        <Button x:Name="CurrentLocation"  BackgroundColor="White" FontSize="11" Clicked="CurrentLocation_Clicked" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
-                    </Grid>
-                    <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center">
-                        <Label x:Name="OROne" Text="OR" FontSize="11" TextColor="#FF071D66"/>
-                    </Grid>
-                    <Grid x:Name="LocationPicker" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button x:Name="CountryPicker"  Style="{StaticResource HomeButtonStyle}" Clicked="CountryPicker_Clicked" Grid.Column="0" FontSize="11" BackgroundColor="White" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
-                        <Button x:Name="CityPicker" Style="{StaticResource HomeButtonStyle}" Clicked="CityPicker_Clicked" Grid.Column="1" FontSize="11"  BackgroundColor="White" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" IsEnabled="False"/>
-                        <Button x:Name="AreaPicker" Style="{StaticResource HomeButtonStyle}" Clicked="AreaPicker_Clicked" Grid.Column="2" FontSize="11"  BackgroundColor="White" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2" IsEnabled="False"/>
-                    </Grid>
-                    <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center">
-                        <Label x:Name="ORTwo"  Text="OR" FontSize="11" TextColor="#FF071D66"/>
-                    </Grid>
-                    <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
-                        <Button x:Name="MapView" Text="MapView" BackgroundColor="White" FontSize="11" Clicked="MapView_Clicked" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
-                    </Grid>
-                    <Label Grid.Row="3" />
-                </Grid>
-            </Grid>
-            <!--End Main Cat -->
+                <Button Text="{trans:Translate CurrentLocation}"  BackgroundColor="White" FontSize="11" 
+                        Clicked="CurrentLocation_Clicked" TextColor="#FF071D66"
+                        BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
+
+                <Label Text="{trans:Translate OR}" FontSize="15" Margin="0,20,0,0"
+                       TextColor="#FF071D66" HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,20,0,0">
+                    <Picker Title="{trans:Translate Country}" Style="{StaticResource HomeButtonStyle}"
+                            SelectedIndexChanged="CountryPicker_Clicked" WidthRequest="100"
+                            FontSize="15" BackgroundColor="White" TextColor="#FF071D66" HorizontalOptions="StartAndExpand" />
+
+                    <Picker Title="{trans:Translate City}" Style="{StaticResource HomeButtonStyle}"
+                            SelectedIndexChanged="CityPicker_Clicked" 
+                            FontSize="15"  BackgroundColor="White" WidthRequest="100"
+                            TextColor="#FF071D66" HorizontalOptions="CenterAndExpand"/>
+
+                    <Picker Title="{trans:Translate Area}" Style="{StaticResource HomeButtonStyle}"
+                            SelectedIndexChanged="AreaPicker_Clicked" FontSize="15" WidthRequest="100"
+                            BackgroundColor="White" TextColor="#FF071D66" HorizontalOptions="EndAndExpand"/>
+
+                </StackLayout>
+
+                <Label Text="{trans:Translate OR}" FontSize="15" TextColor="#FF071D66"
+                       HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+
+                <Button Text="{trans:Translate MapView}" BackgroundColor="White" FontSize="11" Margin="0,20,0,0"
+                        Clicked="MapView_Clicked" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
+
+            </StackLayout>
+
+            <Button Text="{trans:Translate ApplyFilter}" VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                   Style="{StaticResource ButtonStyle1}" Clicked="ApplyFilter_Clicked"/>
+
+        </StackLayout>
+        
+        
+    </ScrollView>
+    
+    
+    
 
             <!--Start Main Button -->
-            <Grid x:Name="MainButtons" Grid.Row="2" ColumnSpacing="4"  RowSpacing="4" IsVisible="False">
+            <!--<Grid x:Name="MainButtons" Grid.Row="2" ColumnSpacing="4"  RowSpacing="4" IsVisible="False">
                 <Grid.ColumnDefinitions>
-                    <!--0-->
                     <ColumnDefinition Width="15" />
                     <ColumnDefinition Width="*" />
-                    <!--1-->
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="15" />
-                    <!--2-->
-                    <!--3-->
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions >
@@ -223,19 +138,15 @@
                     <Image x:Name="AgreculturMainImage" Source="land.png" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start"  Scale="0.8"/>
                 </Grid>
             </Grid>
-            <!--End Main Button -->
+            End Main Button -->
 
-            <!--residential grid-->
+            <!--residential grid
             <Grid x:Name="resideintialcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
-                    <!--0-->
                     <ColumnDefinition Width="*" />
-                    <!--1-->
                     <ColumnDefinition Width="*" />
-                    <!--2-->
                     <ColumnDefinition Width="10" />
-                    <!--3-->
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions >
@@ -249,7 +160,6 @@
                     <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="0.2*"/>
 
-                    <!--1-->
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="1">
@@ -475,24 +385,20 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="15"/>
                     </Grid.ColumnDefinitions>
-                    <!--<range:RangeSlider x:Name="ResidentialSlider" MinimumHeightRequest="80" HeightRequest="80" TextSize="8" MinimumValue="0" MaximumValue="1000000" LowerValue="0" UpperValue="1000000" ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1"  
-                                       BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>-->
+                   <range:RangeSlider x:Name="ResidentialSlider" MinimumHeightRequest="80" HeightRequest="80" TextSize="8" MinimumValue="0" MaximumValue="1000000" LowerValue="0" UpperValue="1000000" ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1"  
+                                       BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
 
                 </Grid>
             </Grid>
-            <!--end ofresidential grid-->
+            end ofresidential grid-->
 
-            <!--start of commercial grid-->
+            <!--start of commercial grid
             <Grid x:Name="commercialcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
-                    <!--0-->
                     <ColumnDefinition Width="*" />
-                    <!--1-->
                     <ColumnDefinition Width="*" />
-                    <!--2-->
                     <ColumnDefinition Width="10" />
-                    <!--3-->
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions >
@@ -504,7 +410,6 @@
                     <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="0.2*"/>
 
-                    <!--1-->
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0" Grid.Column="1">
@@ -550,27 +455,23 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="15"/>
                     </Grid.ColumnDefinitions>
-                    <!--<range:RangeSlider x:Name="CommercialSlider" TextSize="10" MinimumValue="0"
+                    <range:RangeSlider x:Name="CommercialSlider" TextSize="10" MinimumValue="0"
                                        MaximumValue="1000000" LowerValue="0" UpperValue="1000000" 
                                        ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  
                                        StepValue="20" Grid.Column="1"  BarHeight="15" 
-                                       VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>-->
+                                       VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
 
                 </Grid>
             </Grid>
-            <!--end of commercial grid-->
+            end of commercial grid
 
-            <!--start of land grid-->
+            start of land grid
             <Grid x:Name="landcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
-                    <!--0-->
                     <ColumnDefinition Width="*" />
-                    <!--1-->
                     <ColumnDefinition Width="*" />
-                    <!--2-->
                     <ColumnDefinition Width="10" />
-                    <!--3-->
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions >
@@ -582,7 +483,6 @@
                     <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="0.2*"/>
 
-                    <!--1-->
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Grid.ColumnDefinitions>
@@ -724,27 +624,23 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="15"/>
                     </Grid.ColumnDefinitions>
-                    <!--<range:RangeSlider x:Name="LandSlider" TextSize="10" MinimumValue="0" 
+                    <range:RangeSlider x:Name="LandSlider" TextSize="10" MinimumValue="0" 
                                        MaximumValue="1000000" LowerValue="0" UpperValue="1000000" 
                                        ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20"
                                        Grid.Column="1"  BarHeight="15" VerticalOptions="Start"
-                                       HorizontalOptions="Center" TextColor="#FF071D66"/>-->
+                                       HorizontalOptions="Center" TextColor="#FF071D66"/>
 
                 </Grid>
             </Grid>
-            <!--end of land grid-->
+           end of land grid
 
-            <!--start of industrial grid-->
+            start of industrial grid
             <Grid x:Name="industrialcat" Grid.Row="2" ColumnSpacing="4" RowSpacing="4" IsVisible="False">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10" />
-                    <!--0-->
                     <ColumnDefinition Width="*" />
-                    <!--1-->
                     <ColumnDefinition Width="*" />
-                    <!--2-->
                     <ColumnDefinition Width="10" />
-                    <!--3-->
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions >
@@ -756,7 +652,6 @@
                     <RowDefinition Height="0.5*"/>
                     <RowDefinition Height="0.2*"/>
 
-                    <!--1-->
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Grid.Column="2">
                     <Grid.ColumnDefinitions>
@@ -782,77 +677,58 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="15"/>
                     </Grid.ColumnDefinitions>
-                    <!--<range:RangeSlider x:Name="IndustrialSlider" TextSize="10" MinimumValue="0" 
+                    <range:RangeSlider x:Name="IndustrialSlider" TextSize="10" MinimumValue="0" 
                                        MaximumValue="1000000" LowerValue="0" UpperValue="1000000"
                                        ShowTextAboveThumbs="True" ActiveColor="#FF071D66"  StepValue="20" Grid.Column="1" 
-                                       BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>-->
+                                       BarHeight="15" VerticalOptions="Start" HorizontalOptions="Center" TextColor="#FF071D66"/>
                 </Grid>
-            </Grid>
-            <!--end of industrial grid-->
+            </Grid
+            end of industrial grid
 
-            <!--Start Apply Filters -->
-            <Button x:Name="ApplyFilter" Grid.Row="3" Style="{StaticResource ButtonStyle1}" Clicked="ApplyFilter_Clicked"/>
-            <!--End Apply Filters -->
-
-
-            <!--Start Nav Bar -->
-            <Grid Grid.Row="4" ColumnSpacing="11">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="11" />
-                    <!--0-->
-                    <ColumnDefinition Width="*" />
-                    <!--1-->
-                    <ColumnDefinition Width="*" />
-                    <!--2-->
-                    <ColumnDefinition Width="*" />
-                    <!--3-->
-                    <ColumnDefinition Width="*" />
-                    <!--4-->
-                    <ColumnDefinition Width="11" />
-                    <!--5-->
-                </Grid.ColumnDefinitions>
+            Start Apply Filters
+            End Apply Filter
 
 
-                <BoxView BackgroundColor="Pink" Grid.Column="1" IsVisible="False"/>
-                <Image x:Name="HomeButton" Source="home2.png" Grid.Column="1" Scale=".7" IsVisible="False" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnHomeButtonClicked"/>
-                    </Image.GestureRecognizers>
-                </Image>
+            Start Nav Bar
+    <Grid Grid.Row="4" ColumnSpacing="11">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="11" />
+        </Grid.ColumnDefinitions>
+        <BoxView BackgroundColor="Pink" Grid.Column="1" IsVisible="False"/>
+        <Image x:Name="HomeButton" Source="home2.png" Grid.Column="1" Scale=".7" IsVisible="False" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnHomeButtonClicked"/>
+            </Image.GestureRecognizers>
+        </Image>
 
-                <Image x:Name="HomeButtonBlue" Source="home1.png" Grid.Column="1" Scale=".7" IsVisible="True" />
+        <Image x:Name="HomeButtonBlue" Source="home1.png" Grid.Column="1" Scale=".7" IsVisible="True" />
+        <Image x:Name="SearchButton" Source="search1.png" Grid.Column="2" Scale=".7"  IsVisible="True" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnSearchButtonClicked"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image x:Name="SearchButtonBlue" Source="search2.png" Grid.Column="2" Scale=".7" IsVisible="False"/>
 
-
-
-                <Image x:Name="SearchButton" Source="search1.png" Grid.Column="2" Scale=".7"  IsVisible="True" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnSearchButtonClicked"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <Image x:Name="SearchButtonBlue" Source="search2.png" Grid.Column="2" Scale=".7" IsVisible="False"/>
-
-
-                <Image x:Name="FavoriteButton" Source="wishlist1.png" Grid.Column="3" Scale=".7"  IsVisible="True" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnFavoriteButtonClicked"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <Image x:Name="FavoriteButtonBlue" Source="wishlist2.png" Grid.Column="3" Scale=".7" IsVisible="False"/>
-
-
-                <Image x:Name="ProfileButton" Source="profile1.png" Grid.Column="4" Scale=".7"  IsVisible="True" >
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnProfileButtonClicked"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <Image x:Name="ProfileButtonBlue" Source="profile2.png" Grid.Column="4" Scale=".7" IsVisible="False" />
+        <Image x:Name="FavoriteButton" Source="wishlist1.png" Grid.Column="3" Scale=".7"  IsVisible="True" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnFavoriteButtonClicked"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image x:Name="FavoriteButtonBlue" Source="wishlist2.png" Grid.Column="3" Scale=".7" IsVisible="False"/>
 
 
-            </Grid>
-            <!--End Nav Bar -->
+        <Image x:Name="ProfileButton" Source="profile1.png" Grid.Column="4" Scale=".7"  IsVisible="True" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnProfileButtonClicked"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Image x:Name="ProfileButtonBlue" Source="profile2.png" Grid.Column="4" Scale=".7" IsVisible="False" />
+    </Grid>
+    End Nav Bar -->
 
-        </Grid>
 </ContentPage>

@@ -1,7 +1,11 @@
 Acr.UserDialogs
 AndHUD
+FastAndroidCamera
 FormsViewGroup
+Plugin.CurrentActivity
 Plugin.Media
+Plugin.Multilingual
+Plugin.Settings
 Plugin.Toast
 Rg.Plugins.Popup
 SlideOverKit.Droid
@@ -48,3 +52,5 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.RangeSlider.Droid
 Xamarin.RangeSlider.Forms.Droid
+ZXing.Net.Mobile.Forms.Android
+ZXingNetMobile

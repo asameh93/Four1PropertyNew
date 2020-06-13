@@ -25,13 +25,9 @@ namespace Four1Property.Views.Customer
             }
         }
 
-        async private void RegisterNow_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Register());
-        }
         private void GUEST_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Home());
+            Navigation.PushModalAsync(new MainPage());
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
