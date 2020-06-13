@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" BackgroundImage="Splashbackground.png"
+             x:Class="Four1Property.Views.Customer.LoginPage">
+    <ContentPage.Content>
+        
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Image Source="logo.png" VerticalOptions="Center" HeightRequest="300" WidthRequest="200"
+                       Aspect="AspectFit"/>
+
+
+                <StackLayout Margin="20,10,20,10">
+
+                    <Label Text="Email" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry Placeholder="Email"  Style="{StaticResource EntryStyle}" Text="{Binding Email}"/>
+
+                    <Label x:Name="PassWord" Text="Password" FontSize="11" TextColor="#FF071D66" Margin="0,15,0,0"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password" 
+                               HorizontalOptions="FillAndExpand"
+                               IsPassword="True" Style="{StaticResource EntryStyle}"/>
+                        <Image x:Name="ShowHide" Source="ShowPassword2.png" VerticalOptions="Center"
+                               HorizontalOptions="End" HeightRequest="30" WidthRequest="30">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+
+                    <Label Text="Forget Your Password?" TextColor="#FF486C8F" 
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Text="Login" Style="{StaticResource ButtonStyle1}" HorizontalOptions="FillAndExpand"
+                                Command="{Binding LoginCommand}"/>
+
+                        <Button Text="Register Now" Style="{StaticResource ButtonStyle}" 
+                                Command="{Binding RegisterCommand}"
+                                BackgroundColor="#FF72C3FC" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <Button Text="CONTINUE AS A GUEST"
+                            VerticalOptions="EndAndExpand" Margin="0,0,0,10"
+                            Clicked="GUEST_Clicked" Style="{StaticResource ButtonStyle}"/>
+                    
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

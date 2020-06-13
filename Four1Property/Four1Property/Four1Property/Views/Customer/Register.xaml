@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" BackgroundImage="Splashbackground.png"
+             x:Class="Four1Property.Views.Customer.Register">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+                <StackLayout Margin="20,10,20,0">
+                    
+                    <Image x:Name="AddPhoto" Source="RegisterProfileImage.png"  Aspect="AspectFit" Grid.Row="0" Scale="0.8" HorizontalOptions="Center" VerticalOptions="Center"  Style="{StaticResource ImageStyle}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="Email" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry Text="{Binding Email}" Placeholder="Email" 
+                           Style="{StaticResource EntryStyle}" Keyboard="Email"/>
+
+                    <Label x:Name="Password" Text="Password" FontSize="11" TextColor="#FF071D66"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="PasswordEN" Text="{Binding Password}"
+                               Placeholder="Password" HorizontalOptions="FillAndExpand"
+                               Style="{StaticResource EntryStyle}" IsPassword="True" Keyboard="Default"/>
+                        <Image x:Name="ShwoHide" Source="ShowPassword2.png" VerticalOptions="Center" 
+                               HorizontalOptions="End" HeightRequest="30" WidthRequest="30">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <Label x:Name="PhoneNumber" 
+                           Text="PhoneNumber" FontSize="11" TextColor="#FF071D66"/>
+                    <Entry x:Name="Number" Text="{Binding PhoneNumber}" Placeholder="PhoneNumber"  
+                           Style="{StaticResource EntryStyle}" Keyboard="Telephone"/>
+                </StackLayout>
+
+                <Button x:Name="CREATENEWACCOUNT" Text="CREATE NEW ACCOUNT" VerticalOptions="EndAndExpand"
+                        Command="{Binding RegisterCommand}"
+                        Margin="10"  Style="{StaticResource ButtonStyle}"/>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
