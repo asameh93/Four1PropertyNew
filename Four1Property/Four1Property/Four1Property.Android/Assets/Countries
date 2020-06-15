@@ -1,0 +1,32 @@
+[
+	{
+	"Name":"Egypt",
+	"Id":1,
+	"Cities":
+	[
+	 {
+	   "Name":"Alex","Id":1
+	 },
+	 {
+	   "Name":"Cairo","Id":2
+	 }
+	]
+	},
+	{
+	"Name":"Iraq",
+	"Id":2,
+	"Cities":
+	[
+	 {
+	   "Name":"Baghdad","Id":1
+	 },
+	 {
+	   "Name":"Karbala","Id":2
+	 }
+	]
+	},
+	{
+	"Name":"Jordan",
+	"Id":3
+	}
+]

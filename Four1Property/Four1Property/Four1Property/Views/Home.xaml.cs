@@ -46,13 +46,13 @@ namespace Four1Property.Views
         {
 
         }
-        async void AreaPicker_Clicked(object sender, EventArgs e)
-        {
-            
-        }
         async void CityPicker_Clicked(object sender, EventArgs e)
         {
             
+        }
+        async void AreaPicker_Clicked(object sender, EventArgs e)
+        {
+
         }
         private void CommercialMain_Clicked(object sender, EventArgs e)
         {
