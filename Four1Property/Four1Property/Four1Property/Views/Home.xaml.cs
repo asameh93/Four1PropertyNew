@@ -1,4 +1,5 @@
-﻿using Four1Property.Views.Customer;
+﻿using Four1Property.ViewModels;
+using Four1Property.Views.Customer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Four1Property.Views
         {
             InitializeComponent();
             NavigationPage.BarBackgroundColorProperty.Equals(Color.Transparent);
+            BindingContext = new HomeVM();
         }
 
         protected override void OnAppearing()

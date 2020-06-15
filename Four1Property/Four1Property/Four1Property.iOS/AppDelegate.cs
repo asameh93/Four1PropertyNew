@@ -24,6 +24,14 @@ namespace Four1Property.iOS
         {
             SlideOverKit.iOS.SlideOverKit.Init();
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+            Xamarin.FormsGoogleMaps.Init("AIzaSyB21fWQ5BtY71q3a6BxMHA27Mbh9rbj_Pk");
+            Rg.Plugins.Popup.Popup.Init();
+           /*Xamarin.FormsMaps.Init();
+            CachedImageRenderer.Init();
+            CarouselViewRenderer.Init();
+            XLabs.Forms.XFormsAppiOS.Init();
+            CarouselView.FormsPlugin.iOS.CarouselViewRenderer.Init();*/
+            LoadApplication(new App());
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);

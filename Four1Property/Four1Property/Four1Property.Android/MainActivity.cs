@@ -18,6 +18,7 @@ namespace Four1Property.Droid
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             UserDialogs.Init(this);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
             //Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
             //FFImageLoading.Forms.Platform.CachedImageRenderer.Init(false);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);

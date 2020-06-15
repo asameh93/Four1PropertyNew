@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lJGb3/NnEsctbH+eN9iYZb2sY5ezECYGCpHMehH9/e81FDWeQ40If/x1FpoB1fWXnJfIpzQXpBGpFMn4juZKCA==",
+  "dgSpecHash": "Z0s3S6jOp7O8cPgZM9rmji3IJ9Q/qEAf3Pbqk9XViRab0hzPM3MlssljL9tQtb4WK1ZAhyh1KFi1depobfoKdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\FrontEnd1\\Desktop\\NewVersion\\Four1Property\\Four1Property\\Four1Property.iOS\\Four1Property.iOS.csproj",
   "expectedPackageFiles": [
@@ -21,9 +21,12 @@
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.build.download\\0.4.11\\xamarin.build.download.0.4.11.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms.googlemaps\\3.3.0\\xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms.rangeslider\\1.0.2\\xamarin.forms.rangeslider.1.0.2.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.google.ios.maps\\3.5.0\\xamarin.google.ios.maps.3.5.0.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.rangeslider\\1.0.2\\xamarin.rangeslider.1.0.2.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"

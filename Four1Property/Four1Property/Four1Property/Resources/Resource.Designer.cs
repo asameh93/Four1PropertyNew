@@ -178,6 +178,15 @@ namespace Four1Property.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Get Location Successfully.
+        /// </summary>
+        internal static string GetLocation {
+            get {
+                return ResourceManager.GetString("GetLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Industrial.
         /// </summary>
         internal static string Industrial {
@@ -246,6 +255,15 @@ namespace Four1Property.Resources {
         internal static string Msg_ConnectionError {
             get {
                 return ResourceManager.GetString("Msg_ConnectionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Location Avaliable.
+        /// </summary>
+        internal static string NoLocation {
+            get {
+                return ResourceManager.GetString("NoLocation", resourceCulture);
             }
         }
         

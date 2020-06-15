@@ -43,6 +43,7 @@
 
                 <Button Text="{trans:Translate CurrentLocation}"  BackgroundColor="White" FontSize="11" 
                         Clicked="CurrentLocation_Clicked" TextColor="#FF071D66"
+                        Command="{Binding GetCurrentLocation}"
                         BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
 
                 <Label Text="{trans:Translate OR}" FontSize="15" Margin="0,20,0,0"
@@ -68,6 +69,7 @@
                        HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
 
                 <Button Text="{trans:Translate MapView}" BackgroundColor="White" FontSize="11" Margin="0,20,0,0"
+                        Command="{Binding GetFromMap}"
                         Clicked="MapView_Clicked" TextColor="#FF071D66" BorderRadius="7" BorderColor="#FF071D66" BorderWidth="2"/>
 
             </StackLayout>

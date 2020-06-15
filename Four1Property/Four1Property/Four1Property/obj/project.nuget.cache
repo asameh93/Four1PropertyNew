@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cRMX3Fbm9oFMDsTFVdbdzGtMZFlg6UFBhxIjKITjNlKIJ0ueXQ0CXXTEm0HHfqIOnD/DfssW3tt/6BH/rUMWCA==",
+  "dgSpecHash": "A3Zu7BU//K8/R9ZMRCQlGKHUPVGWMbza1s5Eum2oHfaPXfkO2XFTodX7xpCTZNJBnO0EFP1WWn8ODpb/YffRJQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\FrontEnd1\\Desktop\\NewVersion\\Four1Property\\Four1Property\\Four1Property\\Four1Property.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms.googlemaps\\3.3.0\\xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms.rangeslider\\1.0.2\\xamarin.forms.rangeslider.1.0.2.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.rangeslider\\1.0.2\\xamarin.rangeslider.1.0.2.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",

@@ -92,6 +92,10 @@
               "target": "Package",
               "version": "[4.6.0.847, )"
             },
+            "Xamarin.Forms.GoogleMaps": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
             "Xamarin.Forms.RangeSlider": {
               "target": "Package",
               "version": "[1.0.2, )"

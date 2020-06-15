@@ -156,6 +156,9 @@
   <data name="ForgetPassword" xml:space="preserve">
     <value>نسيت كلمة المرور</value>
   </data>
+  <data name="GetLocation" xml:space="preserve">
+    <value>تم الحصول على موقعك بنجاح</value>
+  </data>
   <data name="Industrial" xml:space="preserve">
     <value>صناعية</value>
   </data>
@@ -179,6 +182,9 @@
   </data>
   <data name="Msg_ConnectionError" xml:space="preserve">
     <value>تأكد من وجود إنترنت</value>
+  </data>
+  <data name="NoLocation" xml:space="preserve">
+    <value>لم يتم الحصول ع موقعك</value>
   </data>
   <data name="OR" xml:space="preserve">
     <value>أو</value>

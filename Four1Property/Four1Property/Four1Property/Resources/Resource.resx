@@ -156,6 +156,9 @@
   <data name="ForgetPassword" xml:space="preserve">
     <value>Forget Password</value>
   </data>
+  <data name="GetLocation" xml:space="preserve">
+    <value>Get Location Successfully</value>
+  </data>
   <data name="Industrial" xml:space="preserve">
     <value>Industrial</value>
   </data>
@@ -179,6 +182,9 @@
   </data>
   <data name="Msg_ConnectionError" xml:space="preserve">
     <value>Check Internet Connection</value>
+  </data>
+  <data name="NoLocation" xml:space="preserve">
+    <value>No Location Avaliable</value>
   </data>
   <data name="OR" xml:space="preserve">
     <value>OR</value>

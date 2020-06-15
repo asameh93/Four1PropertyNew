@@ -10,9 +10,16 @@ namespace Four1Property.Droid
 	{
 		protected override void OnResume()
 		{
-			base.OnResume();
-			StartActivity(typeof(MainActivity));
-			Finish();
+            try
+            {
+				base.OnResume();
+				StartActivity(typeof(MainActivity));
+				Finish();
+			}
+            catch (System.Exception ex)
+            {
+				string er = ex.Message;
+            }
 		}
 	}
 }

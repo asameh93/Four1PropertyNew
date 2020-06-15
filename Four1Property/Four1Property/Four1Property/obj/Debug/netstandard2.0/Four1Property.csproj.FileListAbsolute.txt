@@ -19,6 +19,7 @@ C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\Four1Property.Resources.Resource.ar.resources
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\Four1Property.csproj.GenerateResource.cache
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\ar\Four1Property.resources.dll
+C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\PopUps\SearchById.xaml.g.cs
+C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\Views\SetLocation.xaml.g.cs
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\Four1Property.csproj.CoreCompileInputs.cache
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\PopUps\SearchById.xaml.g.cs
