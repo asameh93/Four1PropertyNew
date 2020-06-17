@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" BackgroundImage="Splashbackground.png"
-             xmlns:trans ="clr-namespace:Four1Property.Helpers"
+             xmlns:trans ="clr-namespace:Four1Property.Helper" BackgroundColor="White"
              x:Class="Four1Property.Views.Customer.LoginPage" IconImageSource="home2.png">
     <ContentPage.Content>
         

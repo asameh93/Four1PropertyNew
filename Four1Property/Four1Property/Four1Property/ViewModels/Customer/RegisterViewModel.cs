@@ -21,7 +21,7 @@ namespace Four1Property.ViewModels.Customer
             RegisterCommand = new Command(Register);
         }
 
-        private void Register(object obj)
+        private async void Register(object obj)
         {
             try
             {
@@ -32,31 +32,33 @@ namespace Four1Property.ViewModels.Customer
                     {
                         if (ValidationServices.EmailValidation(Email))
                         {
-                            var result = ApiService.GetOneWithoutData<string>("properties", "SignupMobile/?email=" + Email +
-                                                                              "&password=" + Password + "&number=" + PhoneNumber);
+                            var result = await ApiService.GetOneWithoutData<string>("properties", "SignupMobile/?email=" + Email +
+                                                                                    "&password=" + Password + "&number=" + PhoneNumber);
                             if (result != null)
                             {
-                                App.Current.MainPage = new Home();
-                                Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helpers.TranslateExtension.Translate("RegisterSuccess"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                App.Token = result;
+                                App.Email = Email;
+                                App.Current.MainPage = new MainPage();
+                                Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helper.TranslateExtension.Translate("RegisterSuccess"), Plugin.Toast.Abstractions.ToastLength.Long);
                             }
                             else
                             {
-                                Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("ErrorHappen"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("ErrorHappen"), Plugin.Toast.Abstractions.ToastLength.Long);
                             }
                         }
                         else
                         {
-                            Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("ValidEmail"), Plugin.Toast.Abstractions.ToastLength.Long);
+                            Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("ValidEmail"), Plugin.Toast.Abstractions.ToastLength.Long);
                         }
                     }
                     else
                     {
-                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("EnterAllFields"), Plugin.Toast.Abstractions.ToastLength.Long);
+                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("EnterAllFields"), Plugin.Toast.Abstractions.ToastLength.Long);
                     }
                 }
                 else
                 {
-                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
+                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
                 }
             }
             catch (Exception)

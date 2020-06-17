@@ -14,7 +14,7 @@ namespace Four1Property.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\SetLocation.xaml")]
-    public partial class SetLocation : global::Xamarin.Forms.ContentPage {
+    public partial class SetLocation : global::Rg.Plugins.Popup.Pages.PopupPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.GoogleMaps.Map myMap;

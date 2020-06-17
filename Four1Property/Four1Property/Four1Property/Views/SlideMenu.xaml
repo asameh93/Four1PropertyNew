@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<slideoverkit:SlideMenuView  xmlns:slideoverkit="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+                             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:renders="clr-namespace:Four1Property.Renders"
+                             mc:Ignorable="d"
+             x:Class="Four1Property.Views.SlideMenu">
+        <StackLayout>
+
+        <Image Source="logo.png" VerticalOptions="Center" 
+               HeightRequest="100" WidthRequest="200"
+               Aspect="AspectFit" Margin="10,20,0,0"/>
+            
+        <ListView x:Name="MenuList" HasUnevenRows="True" BackgroundColor="White" 
+                      SeparatorVisibility="Default" SeparatorColor="#044e60"
+                      ItemTapped="MenuList_ItemTapped" Footer="">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <renders:ExtendedViewCell SelectedBackgroundColor="White">
+                            <StackLayout Margin="10">
+                                <StackLayout Orientation="Horizontal" 
+                                         HeightRequest="30" Margin="5">
+                                    <Image Source="{Binding icon}" HeightRequest="40"
+                                           WidthRequest="40"/>
+                                    <Label Text="{Binding title}" FontSize="18" 
+                                           VerticalOptions="Center" FontFamily="serif"
+                                           HorizontalOptions="CenterAndExpand" TextColor="#044e60"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </renders:ExtendedViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+</slideoverkit:SlideMenuView>

@@ -1,4 +1,5 @@
-﻿using Four1Property.Helpers;
+﻿using Four1Property.Helper;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ using Xamarin.Forms.Xaml;
 namespace Four1Property.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SetLocation : ContentPage
+    public partial class SetLocation : PopupPage
     {
         public SetLocation()
         {

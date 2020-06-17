@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Four1Property.Renders
 {
-    public class CustomRatingBar : View
+    public class CustomRatingBar : Xamarin.Forms.View
     {
         public event EventHandler<float> RatingChanged;
         public event EventHandler Tapped;

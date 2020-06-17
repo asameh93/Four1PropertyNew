@@ -243,9 +243,9 @@ namespace Four1Property.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Map.
         /// </summary>
-        internal static string MapView {
+        internal static string MapFour1Property_View {
             get {
-                return ResourceManager.GetString("MapView", resourceCulture);
+                return ResourceManager.GetString("MapFour1Property.View", resourceCulture);
             }
         }
         

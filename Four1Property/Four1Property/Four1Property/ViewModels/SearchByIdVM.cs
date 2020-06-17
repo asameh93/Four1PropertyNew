@@ -1,5 +1,5 @@
 ﻿using Acr.UserDialogs;
-using Four1Property.Helpers;
+using Four1Property.Helper;
 using Four1Property.Models;
 using System;
 using System.Collections.Generic;
@@ -73,13 +73,13 @@ namespace Four1Property.ViewModels
                                         if (PropertyID.PhotoQ10 != null) { PropertyID.AllPhotos.Add(PropertyID.PhotoQ10); }
                                         if (PropertyID.PhotoQ11 != null) { PropertyID.AllPhotos.Add(PropertyID.PhotoQ11); }
                                         if (PropertyID.PhotoQ12 != null) { PropertyID.AllPhotos.Add(PropertyID.PhotoQ12); }
-                                        await Navigation.PushAsync(new PropertyProfile(PropertyID));
+                                        await Navigation.PushModalAsync(new PropertyProfile(PropertyID));
                                         await PopupNavigation.Instance.PopAsync();
                                     }
                                     else
                                     {
                                         UserDialogs.Instance.HideLoading();
-                                        if (Application.Current.Properties["Language"].ToString() == "Arabic")
+                                        if (Settings.Language =="ar")
                                         {
                                             IDEntry.Text = "";
                                             IDEntry.Placeholder = "يرجى ادخال رقم العقار الصحيح";
@@ -98,7 +98,7 @@ namespace Four1Property.ViewModels
                             else
                             {
                                 UserDialogs.Instance.HideLoading();
-                                if (Application.Current.Properties["Language"].ToString() == "Arabic")
+                                if (Settings.Language =="ar")
                                 {
                                     IDEntry.Text = "";
                                     IDEntry.Placeholder = "يرجى ادخال رقم العقار الصحيح";
@@ -115,12 +115,12 @@ namespace Four1Property.ViewModels
                     }
                     else
                     {
-                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("EnterIDNumber"), Plugin.Toast.Abstractions.ToastLength.Long);
+                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(TranslateExtension.Translate("EnterIDNumber"), Plugin.Toast.Abstractions.ToastLength.Long);
                     }
                 }
                 else
                 {
-                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
+                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
                 }
             }
             catch (global::System.Exception)

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "A3Zu7BU//K8/R9ZMRCQlGKHUPVGWMbza1s5Eum2oHfaPXfkO2XFTodX7xpCTZNJBnO0EFP1WWn8ODpb/YffRJQ==",
+  "dgSpecHash": "dVxXvKUC+zHFJeMSZWQEZaH59wuX8xzCC2QNu62TpJMJS4gHBvBCQuT7RrodkP972Or6kgthCc4wWOrL6s1qHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\FrontEnd1\\Desktop\\NewVersion\\Four1Property\\Four1Property\\Four1Property\\Four1Property.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\acr.userdialogs\\7.1.0.442\\acr.userdialogs.7.1.0.442.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\carouselview.formsplugin\\5.2.0\\carouselview.formsplugin.5.2.0.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
@@ -25,6 +26,8 @@
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.ffimageloading\\2.4.11.982\\xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.11.982\\xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms.googlemaps\\3.3.0\\xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
     "C:\\Users\\FrontEnd1\\.nuget\\packages\\xamarin.forms.rangeslider\\1.0.2\\xamarin.forms.rangeslider.1.0.2.nupkg.sha512",

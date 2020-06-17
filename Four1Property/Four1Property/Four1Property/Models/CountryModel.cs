@@ -15,6 +15,13 @@ namespace Four1Property.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public List<AreaModel> Areas { get; set; }
+        public override string ToString() => Name;
+    }
+    public class AreaModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
         public override string ToString() => Name;
     }
 }

@@ -21,7 +21,7 @@ namespace Four1Property.Droid.Renders
             {
                 var gradientDrawable = new GradientDrawable();
                 gradientDrawable.SetCornerRadius(15);
-                gradientDrawable.SetStroke(5, Android.Graphics.Color.DimGray);
+                gradientDrawable.SetStroke(5, Android.Graphics.Color.DarkBlue);
                 gradientDrawable.SetColor(Android.Graphics.Color.White);
                 Control.SetBackground(gradientDrawable);
                 Control.SetPadding(40, 10, 40 , 10);

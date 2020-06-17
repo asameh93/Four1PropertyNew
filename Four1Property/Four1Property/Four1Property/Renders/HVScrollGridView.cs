@@ -83,7 +83,7 @@ namespace Four1Property.Renders
             _itemsStackLayout.Children.Clear();
             _itemsStackLayout.Spacing = Spacing;
 
-            _innerSelectedCommand = new Command<View>(view =>
+            _innerSelectedCommand = new Command<Xamarin.Forms.View>(view =>
             {
                 SelectedItem = view.BindingContext;
                 SelectedItem = null; // Allowing item second time selection
@@ -108,10 +108,10 @@ namespace Four1Property.Renders
             SelectedItem = null;
         }
 
-        protected virtual View GetItemView(object item)
+        protected virtual Xamarin.Forms.View GetItemView(object item)
         {
             var content = ItemTemplate.CreateContent();
-            var view = content as View;
+            var view = content as Xamarin.Forms.View;
 
             if (view == null)
             {
@@ -131,11 +131,11 @@ namespace Four1Property.Renders
             return view;
         }
 
-        private void AddGesture(View view, TapGestureRecognizer gesture)
+        private void AddGesture(Xamarin.Forms.View view, TapGestureRecognizer gesture)
         {
             view.GestureRecognizers.Add(gesture);
 
-            var layout = view as Layout<View>;
+            var layout = view as Layout<Xamarin.Forms.View>;
 
             if (layout == null)
             {

@@ -5,7 +5,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-                  xmlns:trans ="clr-namespace:Four1Property.Helpers"
+                  xmlns:trans ="clr-namespace:Four1Property.Helper"
              x:Class="Four1Property.PopUps.SearchById">
 
     <StackLayout Padding="20,20,20,20"

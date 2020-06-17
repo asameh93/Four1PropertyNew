@@ -19,7 +19,7 @@ namespace Four1Property.Renders
             EasingOut = Easing.CubicIn;
         }
 
-        public override void Preparing(View content, PopupPage page)
+        public override void Preparing(Xamarin.Forms.View content, PopupPage page)
         {
             base.Preparing(content, page);
 
@@ -30,7 +30,7 @@ namespace Four1Property.Renders
             _defaultTranslationY = content.TranslationY;
         }
 
-        public override void Disposing(View content, PopupPage page)
+        public override void Disposing(Xamarin.Forms.View content, PopupPage page)
         {
             base.Disposing(content, page);
 
@@ -41,7 +41,7 @@ namespace Four1Property.Renders
             content.TranslationY = _defaultTranslationY;
         }
 
-        public async override Task Appearing(View content, PopupPage page)
+        public async override Task Appearing(Xamarin.Forms.View content, PopupPage page)
         {
             var taskList = new List<Task>();
 
@@ -60,7 +60,7 @@ namespace Four1Property.Renders
             await Task.WhenAll(taskList);
         }
 
-        public async override Task Disappearing(View content, PopupPage page)
+        public async override Task Disappearing(Xamarin.Forms.View content, PopupPage page)
         {
             var taskList = new List<Task>();
 

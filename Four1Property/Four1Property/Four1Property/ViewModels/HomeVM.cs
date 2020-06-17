@@ -1,4 +1,4 @@
-﻿using Four1Property.Helpers;
+﻿using Four1Property.Helper;
 using Four1Property.Models;
 using Four1Property.Views;
 using Newtonsoft.Json;
@@ -13,8 +13,7 @@ namespace Four1Property.ViewModels
 {
     public class HomeVM : BaseViewModel
     {
-        public List<CountryModel> Countries { get; set; }
-        public List<CityModel> Cities { get; set; }
+        
 
         public Command GetCurrentLocation { get; set; }
         public Command GetFromMap { get; set; }
@@ -58,11 +57,11 @@ namespace Four1Property.ViewModels
                         {
                             Constantce.Lat = location.Latitude;
                             Constantce.lon = location.Longitude;
-                            Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helpers.TranslateExtension.Translate("GetLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
+                            Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(TranslateExtension.Translate("GetLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
                         }
                         else
                         {
-                            Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("NoLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
+                            Plugin.Toast.CrossToastPopUp.Current.ShowToastError(TranslateExtension.Translate("NoLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
                         }
                     }
                 }
@@ -74,26 +73,12 @@ namespace Four1Property.ViewModels
                     {
                         Constantce.Lat = location.Latitude;
                         Constantce.lon = location.Longitude;
-                        Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helpers.TranslateExtension.Translate("GetLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
+                        Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(TranslateExtension.Translate("GetLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
                     }
                     else
                     {
-                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("NoLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
+                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(TranslateExtension.Translate("NoLocation"), Plugin.Toast.Abstractions.ToastLength.Long);
                     }
-                }
-
-                try
-                {
-
-                    var stream1 = await FileSystem.OpenAppPackageFileAsync("Countries");
-                    var reader1 = new StreamReader(stream1);
-                    var fileContents1 = await reader1.ReadToEndAsync();
-                    Countries = JsonConvert.DeserializeObject<List<CountryModel>>(fileContents1);
-                    Cities = Countries[0].Cities;
-                }
-                catch (Exception ex)
-                {
-                    string er = ex.Message;
                 }
             }
             catch (Exception ex)

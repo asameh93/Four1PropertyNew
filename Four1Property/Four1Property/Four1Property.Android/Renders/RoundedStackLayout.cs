@@ -16,7 +16,7 @@ namespace Four1Property.Droid.Renders
         public RoundedStackLayout(Context context) : base(context)
         {
         }
-        protected override void OnElementChanged(ElementChangedEventArgs<View> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.View> e)
         {
             base.OnElementChanged(e);
             if (this.Control == null)

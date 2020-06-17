@@ -35,7 +35,7 @@ namespace Four1Property.ViewModels.Customer
             }        
         }
 
-        private void Login(object obj)
+        private async void Login(object obj)
         {
             try
             {
@@ -47,37 +47,39 @@ namespace Four1Property.ViewModels.Customer
                     {
                         if (ValidationServices.EmailValidation(Email))
                         {
-                            var result = ApiService.GetOneWithoutData<string>("properties", "LoginMobile/?email=" + Email + "&password=" + Password);
+                            var result = await ApiService.GetOneWithoutData<string>("properties", "LoginMobile/?email=" + Email + "&password=" + Password);
                             if (result != null)
                             {
                                 if (result.Equals("InvalidPassword"))
                                 {
-                                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("InvalidPassword"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("InvalidPassword"), Plugin.Toast.Abstractions.ToastLength.Long);
                                 }
                                 else
                                 {
+                                    App.Token = result;
+                                    App.Email = Email;
                                     App.Current.MainPage = new MainPage();
-                                    Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helpers.TranslateExtension.Translate("LoginSuccess"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                    Plugin.Toast.CrossToastPopUp.Current.ShowToastSuccess(Helper.TranslateExtension.Translate("LoginSuccess"), Plugin.Toast.Abstractions.ToastLength.Long);
                                 }
                             }
                             else
                             {
-                                Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("ErrorCredentials"), Plugin.Toast.Abstractions.ToastLength.Long);
+                                Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("ErrorCredentials"), Plugin.Toast.Abstractions.ToastLength.Long);
                             }
                         }
                         else
                         {
-                           Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("ValidEmail"), Plugin.Toast.Abstractions.ToastLength.Long);
+                           Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("ValidEmail"), Plugin.Toast.Abstractions.ToastLength.Long);
                         }
                     }
                     else
                     {
-                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("EnterAllFields"), Plugin.Toast.Abstractions.ToastLength.Long);
+                        Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("EnterAllFields"), Plugin.Toast.Abstractions.ToastLength.Long);
                     }
                 }
                 else
                 {
-                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helpers.TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
+                    Plugin.Toast.CrossToastPopUp.Current.ShowToastError(Helper.TranslateExtension.Translate("Msg_ConnectionError"), Plugin.Toast.Abstractions.ToastLength.Long);
                 }
             }
             catch (Exception)

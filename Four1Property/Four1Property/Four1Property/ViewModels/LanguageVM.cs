@@ -11,14 +11,14 @@ namespace Four1Property.ViewModels
         {
             try
             {
-                string languageName = Helpers.Settings.Language;
+                string languageName = Helper.Settings.Language;
                 if (languageName == "en")
                 {
-                    Helpers.Settings.Language = languageName = "ar";
+                    Helper.Settings.Language = languageName = "ar";
                 }
                 else
                 {
-                    Helpers.Settings.Language = languageName = "en";
+                    Helper.Settings.Language = languageName = "en";
                 }
                 (Xamarin.Forms.DependencyService.Get<Services.ILocalize>()).SetLocale(languageName);
                 if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.iOS)

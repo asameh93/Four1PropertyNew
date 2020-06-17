@@ -27,7 +27,10 @@ namespace Four1Property.Views.Customer
 
         private void GUEST_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MainPage());
+            App.Token = "Guest";
+            App.Email = "";
+            App.Current.MainPage = new MainPage();
+           // Navigation.PushModalAsync(new MainPage());
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {

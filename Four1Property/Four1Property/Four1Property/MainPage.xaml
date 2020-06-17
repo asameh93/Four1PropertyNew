@@ -3,17 +3,15 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-            xmlns:views="clr-namespace:Four1Property.Views"
             mc:Ignorable="d"
             x:Class="Four1Property.MainPage"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-            xmlns:customer="clr-namespace:Four1Property.Views.Customer"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:view="clr-namespace:Four1Property.Views"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="#FF071D"
             android:TabbedPage.BarSelectedItemColor="#000033">
 
-    <views:Home/>
-    <customer:LoginPage/>
-    <customer:Register/>
-
+    <view:Home/>
+    <view:Agents/>
+    <view:SearchByID/>
 </TabbedPage>

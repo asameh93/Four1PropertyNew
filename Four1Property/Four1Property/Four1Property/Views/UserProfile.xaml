@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Four1Property.Views.UserProfile"
+             BackgroundColor="#f8f9fa">
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions >
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="0" Android="0" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--1-->
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform iOS="5" Android="5" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--2-->
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="*" Android="*" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="5" Android="5" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--3-->
+                <RowDefinition >
+                    <RowDefinition.Height>
+                        <OnPlatform  iOS="40" Android="40" />
+                    </RowDefinition.Height>
+                </RowDefinition>
+                <!--4-->
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="2" >
+                <StackLayout  VerticalOptions="FillAndExpand" x:Name="ListLayout">
+                    <Label x:Name="NoProperty" TextColor="Black" FontSize="12" IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -5,10 +5,10 @@
 	"Cities":
 	[
 	 {
-	   "Name":"Alex","Id":1
+	   "Name":"Alex","Id":1,"Areas":[{"Name" :"Agmmi",Id:1}]
 	 },
 	 {
-	   "Name":"Cairo","Id":2
+	   "Name":"Cairo","Id":2,"Areas":[{"Name" :"AlMaadi",Id:1}]
 	 }
 	]
 	},
@@ -27,6 +27,12 @@
 	},
 	{
 	"Name":"Jordan",
-	"Id":3
+	"Id":3,
+	"Cities":
+	[
+	 {
+	   "Name":"AlAqba","Id":1
+	 }
+	]
 	}
 ]
