@@ -51,79 +51,9 @@ namespace Four1Property.Views
                 }
                 this.Title = "ملفي";
                 this.FlowDirection = FlowDirection.RightToLeft;
-                if (            !(string.IsNullOrEmpty(App.Token)) && App.Token != "Guest")
-                {
-                    ToolbarItem Profile = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "ملفي" };
-                    ToolbarItem whsilist = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "المفضلة" };
-                    ToolbarItem Compare = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "المقارنات" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "العملاء" };
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "عنا" };
-                    ToolbarItem Logout = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "تسجيل الخروج" };
-                    Profile.Clicked += Profile_Clicked;
-                    whsilist.Clicked += Wishlist_Clicked;
-                    Logout.Clicked += LogOut_Clicked;
-                    Compare.Clicked += Compare_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    this.ToolbarItems.Add(Profile);
-                    this.ToolbarItems.Add(whsilist);
-                    this.ToolbarItems.Add(Compare);
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(Logout);
-                }
-                else
-                {
-                    ToolbarItem LoginORregister = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "تسجيل الدخول" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "العملاء" };
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "عنا" };
-                    LoginORregister.Clicked += LoginorRegister_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(LoginORregister);
-
-
-                }
-                
             }
             else
             {
-                if (            !(string.IsNullOrEmpty(App.Token)) && App.Token != "Guest")
-                {
-                    ToolbarItem Profile = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Profile" };
-                    ToolbarItem whsilist = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Wishlist" };
-                    ToolbarItem Compare = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Compare" };
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "About" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Agents" };
-                    ToolbarItem Logout = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Logout" };
-                    Profile.Clicked += Profile_Clicked;
-                    whsilist.Clicked += Wishlist_Clicked;
-                    Logout.Clicked += LogOut_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    Compare.Clicked += Compare_Clicked;
-                    this.ToolbarItems.Add(Profile);
-                    this.ToolbarItems.Add(whsilist);
-                    this.ToolbarItems.Add(Compare);
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(Logout);
-                }
-                else
-                {
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "About" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Agents" };
-                    ToolbarItem LoginORregister = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Login" };
-                    LoginORregister.Clicked += LoginorRegister_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(LoginORregister);
-
-                }
                 if (properties.Count == 0)
                 {
                     NoProperty.Text = "No Properties Found";
@@ -865,127 +795,11 @@ namespace Four1Property.Views
             MessagingCenter.Send(this, "preventLandScape");
         }
 
-        private async void Menu_Activated(object sender, EventArgs e)
-        {
-            await PopupNavigation.Instance.PushAsync(new MenuPop());
-        }
-
         private void ListView_ItemAppearing(object sender, ItemVisibilityEventArgs e)
         {
             var selection = e.Item as PropertyModel;
             PID = selection.SID.Replace("ID: ", "");
             PID = PID.Replace(" ", "");
-        }
-        private async void LoginorRegister_Clicked(object sender, EventArgs e)
-        {
-            Application.Current.Properties["Token"] = "Null";
-            Application.Current.Properties["UEmail"] = "Null";
-            var existingPages = Navigation.NavigationStack.ToList();
-            await Navigation.PushModalAsync(new LoginPage());
-            foreach (var page in existingPages)
-            {
-                Navigation.RemovePage(page);
-            }
-        }
-        private async void Compare_Clicked(object sender, EventArgs e)
-        {
-            UserDialogs.Instance.ShowLoading();
-            await Task.Delay(500);
-            string userid = Application.Current.Properties["Token"].ToString();
-            userid = userid.Replace("\"", "");
-            var uri = string.Format(Constantce.URL + "/api/properties/GetCompare/?user={0}", userid);
-            HttpWebRequest request = WebRequest.Create(uri) as HttpWebRequest;
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-            {
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                string Data = reader.ReadToEnd();
-                ObservableCollection<Property> property = JsonConvert.DeserializeObject<ObservableCollection<Property>>(Data);
-                Property property1 = property.FirstOrDefault();
-                Property property2 = property.LastOrDefault();
-                if (property1 != null && property2 != null && property1.SID != property2.SID) { await Navigation.PushModalAsync(new Compare(property1, property2)); }
-                else
-                {
-                    if (Settings.Language =="ar")
-                    {
-                        DisplayAlert("تنبيه", "يجب عليك اضافة عقارين او اكثر", "موافق");
-
-                    }
-                    else
-                    {
-                        DisplayAlert("Alert", "you have to select tow or more properties", "OK");
-                    }
-                }
-            }
-            UserDialogs.Instance.HideLoading();
-        }
-
-        private async void Profile_Clicked(object sender, EventArgs e)
-        {
-            UserDialogs.Instance.ShowLoading();
-            await Task.Delay(500);
-            string userid = Application.Current.Properties["Token"].ToString();
-            userid = userid.Replace("\"", "");
-            var uri = string.Format(Constantce.URL + "/api/properties/GetProfile/?user={0}", userid);
-            HttpWebRequest request = WebRequest.Create(uri) as HttpWebRequest;
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-            {
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                string Data = reader.ReadToEnd();
-                ObservableCollection<Property> property = JsonConvert.DeserializeObject<ObservableCollection<Property>>(Data);
-                await Navigation.PushModalAsync(new UserProfile(property));
-            }
-            UserDialogs.Instance.HideLoading();
-        }
-
-        private async void Wishlist_Clicked(object sender, EventArgs e)
-        {
-            UserDialogs.Instance.ShowLoading();
-            await Task.Delay(500);
-            string userid = Application.Current.Properties["Token"].ToString();
-            userid = userid.Replace("\"", "");
-            var uri = string.Format(Constantce.URL + "/api/properties/GetWishList/?user={0}", userid);
-            HttpWebRequest request = WebRequest.Create(uri) as HttpWebRequest;
-            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-            {
-                StreamReader reader = new StreamReader(response.GetResponseStream());
-                string Data = reader.ReadToEnd();
-                ObservableCollection<Property> property = JsonConvert.DeserializeObject<ObservableCollection<Property>>(Data);
-                await Navigation.PushModalAsync(new Wishlist(property));
-            }
-            UserDialogs.Instance.HideLoading();
-        }
-
-        private async void Agents_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                await Navigation.PushModalAsync(new Agents());
-            }
-
-            catch
-            {
-                await DisplayAlert("Error", "Check App permissions. ", "Ok");
-                return;
-            }
-        }
-
-        private void About_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void LogOut_Clicked(object sender, EventArgs e)
-        {
-            Application.Current.Properties["Token"] = "Null";
-            Application.Current.Properties["UEmail"] = "Null";
-            Application.Current.Properties["WishP"] = "Null";
-            Application.Current.Properties["ComP"] = "Null";
-            var existingPages = Navigation.NavigationStack.ToList();
-            await Navigation.PushModalAsync(new LoginPage());
-            foreach (var page in existingPages)
-            {
-                Navigation.RemovePage(page);
-            }
         }
     }
 }

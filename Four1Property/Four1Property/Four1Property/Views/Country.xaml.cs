@@ -57,12 +57,13 @@ namespace Four1Property.Views
 
                 Jordan.TextColor = Color.White;
                 Jordan.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
+                await PopupNavigation.Instance.PushAsync(new City());
             }
             else
             {
@@ -87,12 +88,13 @@ namespace Four1Property.Views
 
                 Iraq.TextColor = Color.White;
                 Iraq.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
+                await PopupNavigation.Instance.PushAsync(new City());
             }
             else
             {

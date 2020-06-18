@@ -47,30 +47,61 @@ namespace Four1Property.Views
         }
         public List<MenuItemModel> SetMenu()
         {
-            MenuListItems = new List<MenuItemModel>()
+            if (string.IsNullOrEmpty(App.Token))
             {
-                new MenuItemModel(){icon="slidemenuaccount.png",title="Profile"},
-                new MenuItemModel(){icon="vr.png",title="WishList"},
-                new MenuItemModel(){icon="slidemenucontact.png",title="Contact Us"},
-                new MenuItemModel(){icon="about.png",title="About Us"},
-                new MenuItemModel(){icon="terms_icon.png",title="Terms&Condition"},
-                new MenuItemModel(){icon="setting",title="Setting"},
-                new MenuItemModel(){icon="slidemenuexit.png",title="Log Out"},
-            };
+                MenuListItems = new List<MenuItemModel>()
+                {
+                    new MenuItemModel(){icon="slidemenuaccount.png",title="Home"},
+                    new MenuItemModel(){icon="slidemenucontact.png",title="Contact Us"},
+                    new MenuItemModel(){icon="about.png",title="About Us"},
+                    new MenuItemModel(){icon="terms_icon.png",title="Terms&Condition"},
+                    new MenuItemModel(){icon="setting",title= TranslateExtension.Translate("Text_Language")},
+                };
+            }
+            else
+            {
+                MenuListItems = new List<MenuItemModel>()
+                {
+                    new MenuItemModel(){icon="slidemenuaccount.png",title="Home"},
+                    new MenuItemModel() { icon = "slidemenuaccount.png", title = "Profile" },
+                    new MenuItemModel() { icon = "vr.png", title = "WishList" },
+                    new MenuItemModel() { icon = "slidemenucontact.png", title = "Contact Us" },
+                    new MenuItemModel() { icon = "about.png", title = "About Us" },
+                    new MenuItemModel() { icon = "terms_icon.png", title = "Terms&Condition" },
+                    new MenuItemModel() { icon = "setting", title = TranslateExtension.Translate("Text_Language") },
+                    new MenuItemModel() { icon = "slidemenuexit.png", title = "Log Out" },
+                };
+            }
             return MenuListItems;
+
         }
         public List<MenuItemModel> SetArabicMenu()
         {
-            MenuListItems = new List<MenuItemModel>()
+            if(string.IsNullOrEmpty(App.Token))
             {
-                new MenuItemModel(){icon="slidemenuaccount.png",title="الملف الشخصى"},
-                 new MenuItemModel(){icon="vr.png",title="المفضلة"},
-                new MenuItemModel(){icon="slidemenucontact.png",title="تواصل معنا"},
-                new MenuItemModel(){icon="about.png",title="من نحن"},
-                new MenuItemModel(){icon="terms_icon.png",title="الشروط والاحكام"},
-                new MenuItemModel(){icon="setting",title="الاعدادات"},
-                new MenuItemModel(){icon="slidemenuexit.png",title="تسجيل الخروج"},
-            };
+                MenuListItems = new List<MenuItemModel>()
+                {
+                    new MenuItemModel(){icon="slidemenuaccount.png",title="الصفحة الرئيسية"},
+                    new MenuItemModel(){icon="slidemenucontact.png",title="تواصل معنا"},
+                    new MenuItemModel(){icon="about.png",title="من نحن"},
+                    new MenuItemModel(){icon="terms_icon.png",title="الشروط والاحكام"},
+                    new MenuItemModel(){icon="setting",title=TranslateExtension.Translate("Text_Language")},
+                };
+            }
+            else
+            {
+                MenuListItems = new List<MenuItemModel>()
+                {
+                    new MenuItemModel(){icon="slidemenuaccount.png",title="الصفحة الرئيسية"},
+                    new MenuItemModel(){icon="slidemenuaccount.png",title="الملف الشخصى"},
+                    new MenuItemModel(){icon="vr.png",title="المفضلة"},
+                    new MenuItemModel(){icon="slidemenucontact.png",title="تواصل معنا"},
+                    new MenuItemModel(){icon="about.png",title="من نحن"},
+                    new MenuItemModel(){icon="terms_icon.png",title="الشروط والاحكام"},
+                    new MenuItemModel(){icon="setting",title=TranslateExtension.Translate("Text_Language")},
+                    new MenuItemModel(){icon="slidemenuexit.png",title="تسجيل الخروج"},
+                };
+            }
             return MenuListItems;
         }
         private async void MenuList_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -88,10 +119,11 @@ namespace Four1Property.Views
                     this.HideWithoutAnimations();
                     Application.Current.MainPage = new MainPage();
                 }
-                else if (selectedItem.title.Equals("Setting") || selectedItem.title.Equals("الاعدادات"))
+                else if (selectedItem.title.Equals(TranslateExtension.Translate("Text_Language")))
                 {
                     try
                     {
+                        App.Current.MainPage = new LanguagePage();
                         this.HideWithoutAnimations();
                     }
                     catch (Exception ex)

@@ -123,6 +123,9 @@
   <data name="Area" xml:space="preserve">
     <value>المنطقة</value>
   </data>
+  <data name="CallAgent" xml:space="preserve">
+    <value>مكالمة العميل</value>
+  </data>
   <data name="City" xml:space="preserve">
     <value>المدينة</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="CurrentLocation" xml:space="preserve">
     <value>الموقع الحالى</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>الموقع</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكترونى</value>
@@ -183,6 +189,12 @@
   <data name="Msg_ConnectionError" xml:space="preserve">
     <value>تأكد من وجود إنترنت</value>
   </data>
+  <data name="Msg_NoLocation" xml:space="preserve">
+    <value>الموقع غير متاح</value>
+  </data>
+  <data name="MustLogin" xml:space="preserve">
+    <value>يجب تسجيل الدخول اولا</value>
+  </data>
   <data name="NoLocation" xml:space="preserve">
     <value>لم يتم الحصول ع موقعك</value>
   </data>
@@ -221,6 +233,12 @@
   </data>
   <data name="String1" xml:space="preserve">
     <value>بحث</value>
+  </data>
+  <data name="Text_Language" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Text_Loading" xml:space="preserve">
+    <value>جارى التحميل</value>
   </data>
   <data name="ValidEmail" xml:space="preserve">
     <value>أدخل بريد إلكترونى صحيح</value>

@@ -42,6 +42,7 @@ namespace Four1Property.Views
             this.FlowDirection = FlowDirection.RightToLeft;
             if (Settings.Language == "ar")
             {
+                this.Title = "الرئيسية";
                 this.FlowDirection = FlowDirection.RightToLeft;
                 CurrentLocation.Text = "موقعك الحالي";
                 if (Constantce.Country != "Country")
@@ -120,80 +121,11 @@ namespace Four1Property.Views
                 Rent.Source = "Choose2Arabic.png";
                 SaleBlue.Source = "Choose11Arabic.png";
                 RentBlue.Source = "Choose22Arabic.png";
-                if (!(string.IsNullOrEmpty(App.Token)) && App.Token != "Guest")
-                {
-                    ToolbarItem Profile = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "ملفي" };
-                    ToolbarItem whsilist = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "المفضلة" };
-                    ToolbarItem Compare = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "المقارنات" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "العملاء" };
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "عنا" };
-                    ToolbarItem Logout = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "تسجيل الخروج" };
-                    Profile.Clicked += Profile_Clicked;
-                    whsilist.Clicked += Wishlist_Clicked;
-                    Logout.Clicked += LogOut_Clicked;
-                    Compare.Clicked += Compare_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    this.ToolbarItems.Add(Profile);
-                    this.ToolbarItems.Add(whsilist);
-                    this.ToolbarItems.Add(Compare);
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(Logout);
-                }
-                else
-                {
-                    ToolbarItem LoginORregister = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "تسجيل الدخول" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "العملاء" };
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "عنا" };
-                    LoginORregister.Clicked += LoginorRegister_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(LoginORregister);
-
-
-                }
 
             }
             else
             {
-                if (!(string.IsNullOrEmpty(App.Token)) && App.Token != "Guest")
-                {
-                    ToolbarItem Profile = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Profile" };
-                    ToolbarItem whsilist = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Wishlist" };
-                    ToolbarItem Compare = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Compare" };
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "About" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Agents" };
-                    ToolbarItem Logout = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Logout" };
-                    Profile.Clicked += Profile_Clicked;
-                    whsilist.Clicked += Wishlist_Clicked;
-                    Logout.Clicked += LogOut_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    Compare.Clicked += Compare_Clicked;
-                    this.ToolbarItems.Add(Profile);
-                    this.ToolbarItems.Add(whsilist);
-                    this.ToolbarItems.Add(Compare);
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(Logout);
-                }
-                else
-                {
-                    ToolbarItem About = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "About" };
-                    ToolbarItem Agents = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Agents" };
-                    ToolbarItem LoginORregister = new ToolbarItem { Order = ToolbarItemOrder.Secondary, Text = "Login" };
-                    LoginORregister.Clicked += LoginorRegister_Clicked;
-                    About.Clicked += About_Clicked;
-                    Agents.Clicked += Agents_Clicked;
-                    this.ToolbarItems.Add(Agents);
-                    this.ToolbarItems.Add(About);
-                    this.ToolbarItems.Add(LoginORregister);
-
-                }
-
+                this.Title = "Home";
                 this.FlowDirection = FlowDirection.LeftToRight;
                 CurrentLocation.Text = "Your Current Location";
                 if (Constantce.Country != "Country")
@@ -326,7 +258,7 @@ namespace Four1Property.Views
             base.OnAppearing();
             MessagingCenter.Send(this, "preventLandScape");
         }
-        void OpenSlide(object sender , EventArgs e)
+        void OpenSlide(object sender, EventArgs e)
         {
             this.ShowMenu();
         }
@@ -497,19 +429,17 @@ namespace Four1Property.Views
                 MainButtons.IsVisible = false;
                 maincategory.IsVisible = true;
             }
-
         }
         async void CountryPicker_Clicked(object sender, EventArgs e)
         {
             CountryPicker.IsEnabled = false;
             await PopupNavigation.Instance.PushAsync(new Country());
             CountryPicker.IsEnabled = true;
-
-
         }
         async void AreaPicker_Clicked(object sender, EventArgs e)
         {
             AreaPicker.IsEnabled = false;
+            await PopupNavigation.Instance.PopAsync();
             if (Constantce.Country == "Jordan")
             {
                 if (Constantce.City == "Amman")
@@ -641,6 +571,7 @@ namespace Four1Property.Views
         async void CityPicker_Clicked(object sender, EventArgs e)
         {
             CityPicker.IsEnabled = false;
+            await PopupNavigation.Instance.PopAsync();
             await PopupNavigation.Instance.PushAsync(new City());
             CityPicker.IsEnabled = true;
         }

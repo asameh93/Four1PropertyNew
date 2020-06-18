@@ -292,11 +292,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = Ammanbtn.Text;
                 Ammanbtn.TextColor = Color.White;
                 Ammanbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -319,11 +319,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = Ajlunbtn.Text;
                 Ajlunbtn.TextColor = Color.White;
                 Ajlunbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -347,11 +347,10 @@ namespace Four1Property.Views
                 Constantce.CityLang = AlAqabahbtn.Text;
                 AlAqabahbtn.TextColor = Color.White;
                 AlAqabahbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
-
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -373,11 +372,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = AlBalqabtn.Text;
                 AlBalqabtn.TextColor = Color.White;
                 AlBalqabtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -401,11 +400,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = AlKarakbtn.Text;
                 AlKarakbtn.TextColor = Color.White;
                 AlKarakbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -429,11 +428,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = AlMafraqbtn.Text;
                 AlMafraqbtn.TextColor = Color.White;
                 AlMafraqbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -456,11 +455,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = AlTafilahbtn.Text;
                 AlTafilahbtn.TextColor = Color.White;
                 AlTafilahbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -482,11 +481,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = AzZarqabtn.Text;
                 AzZarqabtn.TextColor = Color.White;
                 AzZarqabtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -510,11 +509,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = Irbidbtn.Text;
                 Irbidbtn.TextColor = Color.White;
                 Irbidbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+               /* var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -538,11 +537,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = Jarashbtn.Text;
                 Jarashbtn.TextColor = Color.White;
                 Jarashbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -566,13 +565,13 @@ namespace Four1Property.Views
                 Constantce.CityLang = Maanbtn.Text;
                 Maanbtn.TextColor = Color.White;
                 Maanbtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+               /* var existingPages = Navigation.NavigationStack.ToList();
                  Navigation.PushModalAsync(new Home());
                 foreach (var page in existingPages)
                 {
                     Navigation.RemovePage(page);
                 }
-                await Task.Delay(80);
+                await Task.Delay(80);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -595,11 +594,11 @@ namespace Four1Property.Views
                 Constantce.CityLang = Madababtn.Text;
                 Madababtn.TextColor = Color.White;
                 Madababtn.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -625,11 +624,11 @@ namespace Four1Property.Views
 
                 Baghdad.TextColor = Color.White;
                 Baghdad.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+               /* var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -653,11 +652,11 @@ namespace Four1Property.Views
 
                 Ninawa.TextColor = Color.White;
                 Ninawa.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -682,11 +681,11 @@ namespace Four1Property.Views
 
                 AlBasrah.TextColor = Color.White;
                 AlBasrah.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -712,11 +711,11 @@ namespace Four1Property.Views
 
                 Karbala.TextColor = Color.White;
                 Karbala.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -741,11 +740,11 @@ namespace Four1Property.Views
 
                 AlNajaf.TextColor = Color.White;
                 AlNajaf.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -769,11 +768,11 @@ namespace Four1Property.Views
 
                 AlMuthanna.TextColor = Color.White;
                 AlMuthanna.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -798,11 +797,11 @@ namespace Four1Property.Views
 
                 AlAnbar.TextColor = Color.White;
                 AlAnbar.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -827,11 +826,11 @@ namespace Four1Property.Views
 
                 SalahAlDdin.TextColor = Color.White;
                 SalahAlDdin.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -856,11 +855,11 @@ namespace Four1Property.Views
 
                 Arbil.TextColor = Color.White;
                 Arbil.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -885,11 +884,11 @@ namespace Four1Property.Views
 
                 Dahuk.TextColor = Color.White;
                 Dahuk.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -915,11 +914,11 @@ namespace Four1Property.Views
 
                 AlSulaymaniyah.TextColor = Color.White;
                 AlSulaymaniyah.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -944,11 +943,11 @@ namespace Four1Property.Views
 
                 Babil.TextColor = Color.White;
                 Babil.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+               /* var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -973,11 +972,11 @@ namespace Four1Property.Views
 
                 Maysan.TextColor = Color.White;
                 Maysan.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+               /* var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -1002,11 +1001,11 @@ namespace Four1Property.Views
 
                 Diqar.TextColor = Color.White;
                 Diqar.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -1031,11 +1030,11 @@ namespace Four1Property.Views
 
                 Wasit.TextColor = Color.White;
                 Wasit.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -1060,11 +1059,11 @@ namespace Four1Property.Views
 
                 AlTamin.TextColor = Color.White;
                 AlTamin.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -1089,11 +1088,11 @@ namespace Four1Property.Views
 
                 Diyalla.TextColor = Color.White;
                 Diyalla.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else
@@ -1117,11 +1116,11 @@ namespace Four1Property.Views
 
                 AlQadsyiah.TextColor = Color.White;
                 AlQadsyiah.BackgroundColor = Color.FromHex("FF071D66");
-                var existingPages = Navigation.NavigationStack.ToList();
+                /*var existingPages = Navigation.NavigationStack.ToList();
                 Page page = existingPages.FirstOrDefault();
 
                 Navigation.InsertPageBefore(new Home(), page);
-                Navigation.RemovePage(page);
+                Navigation.RemovePage(page);*/
                 await PopupNavigation.Instance.PopAsync();
             }
             else

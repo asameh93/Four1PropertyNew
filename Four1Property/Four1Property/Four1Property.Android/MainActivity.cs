@@ -20,7 +20,7 @@ namespace Four1Property.Droid
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
             //Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
-            //FFImageLoading.Forms.Platform.CachedImageRenderer.Init(false);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             UserDialogs.Init(this);

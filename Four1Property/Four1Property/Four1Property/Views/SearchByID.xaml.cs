@@ -30,6 +30,7 @@ namespace Four1Property.Views
                 IDLable.Text = "رقم العقار";
                 IDEntry.Placeholder = "ادخل رقم العقار";
                 SearchID.Text = "بحث";
+                this.Title = "بحث";
             }
             else
             {
@@ -37,6 +38,7 @@ namespace Four1Property.Views
                 IDLable.Text = "Property ID";
                 IDEntry.Placeholder = "Enter ID Number";
                 SearchID.Text = "Search";
+                this.Title = "Search";
             }
         }
 

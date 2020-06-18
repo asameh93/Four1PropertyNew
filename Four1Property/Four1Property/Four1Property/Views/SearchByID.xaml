@@ -2,7 +2,7 @@
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             x:Class="Four1Property.Views.SearchByID" Title="Search" IconImageSource="search1">
+             x:Class="Four1Property.Views.SearchByID" IconImageSource="search1">
     
     <StackLayout Padding="20,20,20,20"
                  BackgroundColor="#E6A9A9A9"

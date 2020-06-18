@@ -70,3 +70,4 @@ C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\ar\Four1Property.resources.dll
 C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\Views\SlideMenu.xaml.g.cs
+C:\Users\FrontEnd1\Desktop\NewVersion\Four1Property\Four1Property\Four1Property\obj\Debug\netstandard2.0\Views\LanguagePage.xaml.g.cs

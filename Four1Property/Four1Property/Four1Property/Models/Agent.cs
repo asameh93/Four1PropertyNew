@@ -110,7 +110,6 @@ namespace Four1Property.Models
 
         public System.DateTime? BirthDate { get; set; }
 
-
         public string ProfileImage { get; set; }
 
         public DateTime? JoinedDate { get; set; }
@@ -122,7 +121,6 @@ namespace Four1Property.Models
         public virtual IEnumerable<UserRating> UserRatings { get; set; }
 
         public virtual IEnumerable<Review> Reviews { get; set; }
-
     }
 
 }

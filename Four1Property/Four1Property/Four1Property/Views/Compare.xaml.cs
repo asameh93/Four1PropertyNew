@@ -788,7 +788,6 @@ namespace Four1Property.Views
                 }
             }
         }
-
         protected override void OnAppearing()
         {
             base.OnAppearing();

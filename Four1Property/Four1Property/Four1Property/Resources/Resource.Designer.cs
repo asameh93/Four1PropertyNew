@@ -79,6 +79,15 @@ namespace Four1Property.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Call Agent.
+        /// </summary>
+        internal static string CallAgent {
+            get {
+                return ResourceManager.GetString("CallAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         internal static string City {
@@ -120,6 +129,15 @@ namespace Four1Property.Resources {
         internal static string CurrentLocation {
             get {
                 return ResourceManager.GetString("CurrentLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Direction.
+        /// </summary>
+        internal static string Direction {
+            get {
+                return ResourceManager.GetString("Direction", resourceCulture);
             }
         }
         
@@ -243,9 +261,9 @@ namespace Four1Property.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Map.
         /// </summary>
-        internal static string MapFour1Property_View {
+        internal static string MapView {
             get {
-                return ResourceManager.GetString("MapFour1Property.View", resourceCulture);
+                return ResourceManager.GetString("MapView", resourceCulture);
             }
         }
         
@@ -255,6 +273,24 @@ namespace Four1Property.Resources {
         internal static string Msg_ConnectionError {
             get {
                 return ResourceManager.GetString("Msg_ConnectionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Location Available.
+        /// </summary>
+        internal static string Msg_NoLocation {
+            get {
+                return ResourceManager.GetString("Msg_NoLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must Login.
+        /// </summary>
+        internal static string MustLogin {
+            get {
+                return ResourceManager.GetString("MustLogin", resourceCulture);
             }
         }
         
@@ -372,6 +408,24 @@ namespace Four1Property.Resources {
         internal static string Search {
             get {
                 return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to العربية.
+        /// </summary>
+        internal static string Text_Language {
+            get {
+                return ResourceManager.GetString("Text_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading.
+        /// </summary>
+        internal static string Text_Loading {
+            get {
+                return ResourceManager.GetString("Text_Loading", resourceCulture);
             }
         }
         

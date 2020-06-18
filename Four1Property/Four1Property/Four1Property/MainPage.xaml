@@ -8,7 +8,7 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
             xmlns:view="clr-namespace:Four1Property.Views"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            android:TabbedPage.BarItemColor="#FF071D"
+            android:TabbedPage.BarItemColor="DimGray"
             android:TabbedPage.BarSelectedItemColor="#000033">
 
     <view:Home/>

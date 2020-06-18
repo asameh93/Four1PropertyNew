@@ -1,30 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Four1Property.Views.Agents"
-             Title="Agents" IconImageSource="profile1"
-              BackgroundColor="#f8f9fa">
+<slideoverkit:MenuContainerPage  xmlns:slideoverkit="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+                                 xmlns="http://xamarin.com/schemas/2014/forms"
+                                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                 xmlns:renders="clr-namespace:Four1Property.Renders"
+                                 xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                                 x:Class="Four1Property.Views.Agents"
+                                 xmlns:trans ="clr-namespace:Four1Property.Helper"
+                                 IconImageSource="profile1"
+                                 BackgroundColor="White">  
     <ContentPage.Content>
-        <Grid RowSpacing="0">
-
-            <Grid.RowDefinitions >
-                <!--0-->
-                
-                <!--2-->
-                <RowDefinition Height="*"/>
-                <!--3-->
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="40"/>
-                <!--4-->
-            </Grid.RowDefinitions>
-
-            <ScrollView x:Name="MainLayout" Grid.Row="0">
-                <StackLayout  VerticalOptions="FillAndExpand" x:Name="ListLayout">
-                    
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-
-
+        <StackLayout>
+            <Image Source="menu" HeightRequest="30" WidthRequest="30" Aspect="AspectFit"
+                   HorizontalOptions="Start" Margin="10,10,10,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OpenSlide"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <ListView x:Name="agentsListView" HasUnevenRows="True" ItemsSource="{Binding Agents}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <renders:ExtendedViewCell SelectedBackgroundColor="White">
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20">
+                                <StackLayout Orientation="Horizontal">
+                                    <forms:CachedImage Source="{Binding ProfileImage}" Aspect="AspectFit"
+                                                   LoadingPlaceholder="profile2.png" ErrorPlaceholder="profile2.png"
+                                                   HeightRequest="50" WidthRequest="50"/>
+                                    <StackLayout HorizontalOptions="FillAndExpand">
+                                        <StackLayout HorizontalOptions="FillAndExpand">
+                                            <Label Text="{Binding FullName}" FontSize="17" FontAttributes="Bold" 
+                                               VerticalOptions="CenterAndExpand" TextColor="Black"
+                                           HorizontalOptions="FillAndExpand" FontFamily="serif"/>
+                                            <Label Text="{Binding DisplayAddress}" FontSize="14"
+                                               VerticalOptions="CenterAndExpand" TextColor="Black"
+                                           HorizontalOptions="FillAndExpand" FontFamily="serif"/>
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                            <Button Text="{trans:Translate Direction}" FontSize="11" VerticalOptions="CenterAndExpand"
+                                            TextColor="White" BackgroundColor="#FF071D66" CornerRadius="15"
+                                            HorizontalOptions="FillAndExpand" FontFamily="serif"
+                                            Command="{Binding Path=BindingContext.GetDirectionCommand,Source={x:Reference agentsListView}}"
+                                            CommandParameter="{Binding .}"/>
+                                            <Button Text="{trans:Translate CallAgent}" FontSize="11" VerticalOptions="CenterAndExpand"
+                                           TextColor="White" BackgroundColor="#FF071D66" CornerRadius="15"
+                                           HorizontalOptions="FillAndExpand" FontFamily="serif"
+                                            Command="{Binding Path=BindingContext.CallCommand,Source={x:Reference agentsListView}}"
+                                            CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </renders:ExtendedViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</slideoverkit:MenuContainerPage>
