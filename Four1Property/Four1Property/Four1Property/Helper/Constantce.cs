@@ -9,7 +9,6 @@ namespace Four1Property.Helper
     public class Constantce
     {
         public static string URL = "https://property1111.com";
-        
         public static string APIName = "GetProperties";
         public static string APINameTest = "GetProperties";
         public static string City = "City";
